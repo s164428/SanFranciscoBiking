@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  
+
+
+
+  
+  
+
+
+<head lang="en-us">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="What came first, the chicken or the egg? Or in this case, the bicyclist or the bicycle lane? In this blog post we will dive into and try to see if it&rsquo;s possible to answer this question, through the means of data. By analyzing datasets about the usage of bicycles along with data pertaining to the bicycle facilities in the same area, we hope to investigate whether it will be possible to determine if the strategies and actions of a city can have an impact on the transportation choices of its people." />
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>What came first: The Bicyclist, or the Bicycle Lane? | My New Hugo Site</title>
+  <link rel="canonical" href="http://example.org/posts/sanfranciscobiking/" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="What came first, the chicken or the egg? Or in this case, the bicyclist or the bicycle lane? In this blog post we will dive into and try to see if it&rsquo;s possible to answer this question, through the means of data. By analyzing datasets about the usage of bicycles along with data pertaining to the bicycle facilities in the same area, we hope to investigate whether it will be possible to determine if the strategies and actions of a city can have an impact on the transportation choices of its people." />
+  <meta property="og:title" content="What came first: The Bicyclist, or the Bicycle Lane?" />
+  <meta property="og:site_name" content="My New Hugo Site" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:url" content="http://example.org/posts/sanfranciscobiking/" />
+  <meta property="og:locale" content="en-us" />
+
+  
+    <meta property="article:published_time" content="2022-05-04" />
+    <meta property="article:modified_time" content="2022-05-04" />
+    
+  
+
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="What came first: The Bicyclist, or the Bicycle Lane? | My New Hugo Site" />
+  <meta name="twitter:description" content="What came first, the chicken or the egg? Or in this case, the bicyclist or the bicycle lane? In this blog post we will dive into and try to see if it&rsquo;s possible to answer this question, through the means of data. By analyzing datasets about the usage of bicycles along with data pertaining to the bicycle facilities in the same area, we hope to investigate whether it will be possible to determine if the strategies and actions of a city can have an impact on the transportation choices of its people." />
+  <meta name="twitter:domain" content="http://example.org/posts/sanfranciscobiking/" />
+
+  
+  
+    <link rel="icon" href="http://example.org/favicon.ico">
+  
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/modern-normalize@1.0.0/modern-normalize.min.css">
+
+  
+  
+  
+
+  
+
+  
+    
+    <link rel="stylesheet" href="http://example.org/style.min.ac3c47b4dc9a506af60a9bd3f8351fd882635c7e326aa3a64223fe59caf9a852.css" integrity="sha256-rDxHtNyaUGr2CpvT&#43;DUf2IJjXH4yaqOmQiP&#43;Wcr5qFI=" rel="preload stylesheet" as="style"/>
+  
+
+  
+  
+    
+  
+</head>
+
+  <body>
+    <script>
+  const currentTheme = window.localStorage.getItem('theme')
+  if (currentTheme === "dark") {
+    document.body.classList.toggle("theme-dark");
+  } else if (currentTheme == "light") {
+    document.body.classList.toggle("theme-light");
+  }
+</script>
+<header id="header">
+  <div class="row">
+    <div class="container has-padding nav">
+      <button id="navbar-toggler" class="navbar-button" aria-hidden="true">
+
+
+
+
+
+
+
+
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M64 384h384v-42.67H64zm0-106.67h384v-42.66H64zM64 128v42.67h384V128z'/></svg>
+
+
+
+
+
+</button>
+      <div class="navbar-brand">
+        <a class="logo navbar-button" href="http://example.org/" title="My New Hugo Site">
+          <span>My New Hugo Site</span>
+        </a>
+      </div>
+      <nav class="navbar" role="navigation">
+        <ul>
+          
+          
+        </ul>
+      </nav>
+      <div class="theme-selector">
+        <button class="button is-text" id="theme-selector-button" title="toggle theme">
+          <span class="label icon">
+
+
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M256 32C132.29 32 32 132.29 32 256s100.29 224 224 224 224-100.29 224-224S379.71 32 256 32zM128.72 383.28A180 180 0 01256 76v360a178.82 178.82 0 01-127.28-52.72z'/></svg>
+
+
+
+
+
+
+
+
+
+
+
+</span>
+        </button>
+      </div>
+    </div>
+    <div class="container has-padding">
+      <div class="breadcrumb">
+        
+<ol  class="breadcrumb-nav">
+  
+
+  
+
+  
+
+<li >
+  <a href="http://example.org/">Home</a>
+</li>
+
+
+<li >
+  <a href="http://example.org/posts/">Posts</a>
+</li>
+
+
+<li class="active">
+  <a href="http://example.org/posts/sanfranciscobiking/">What came first: The Bicyclist, or the Bicycle Lane?</a>
+</li>
+
+</ol>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+
+<main id="main">
+  <div class="container has-padding">
+    <div class="article-card post single">
+      <h1 class="title">What came first: The Bicyclist, or the Bicycle Lane?</h1>
+      <div class="post-info">
+        <span>
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M32 456a24 24 0 0024 24h400a24 24 0 0024-24V176H32zm320-244a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zM456 64h-55.92V32h-48v32H159.92V32h-48v32H56a23.8 23.8 0 00-24 23.77V144h448V87.77A23.8 23.8 0 00456 64z'/></svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<time datetime=2022-05-04T15:51:01&#43;0200 class="date">May 04, 2022</time></span>
+        <span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M256 48C141.13 48 48 141.13 48 256c0 114.69 93.32 208 208 208 114.86 0 208-93.14 208-208 0-114.69-93.31-208-208-208zm108 240H244a4 4 0 01-4-4V116a4 4 0 014-4h24a4 4 0 014 4v140h92a4 4 0 014 4v24a4 4 0 01-4 4z'/></svg>
+19 mins to read</span>
+        
+        
+        
+          <span>posts </span>
+        
+      </div>
+      <article class="post-entry content">
+        <p><strong>What came first, the chicken or the egg?</strong> Or in this case, the bicyclist or the bicycle lane? In this blog post we will dive into and try to see if it&rsquo;s possible to answer this question, through the means of data. By analyzing datasets about the usage of bicycles along with data pertaining to the bicycle facilities in the same area, we hope to investigate whether it will be possible to determine if the strategies and actions of a city can have an impact on the transportation choices of its people. We will look deeper into bike usage patterns, what it is dependent on, and investigate whether it is possible to see clear increases (or decreases!) as a direct result of construction and safety of the lanes.</p>
+<p>Does bicycle usage follow lane network expansion? Do some types of lanes entice more than others? Is it even possible to correlate bicycle usage with the bike network? Or does the <em>mind of the bicyclists</em> have a life of its own, coming and going as it pleases independently of what a city may try to do to entice it to stay?</p>
+<p>We will dive down into the data of <strong>San Francisco</strong> for this analysis.</p>
+<hr>
+<h3 id="why-is-this-important">Why is this important?</h3>
+<p>Bicycling has several benefits, both for the rider, the city, and the world as a whole. It is good for the body and promotes better longterm public health. It reduces emissions of greenhouse gasses, as replacement of traditional vehicle transportation, affecting both the city&rsquo;s own pollution level, but also the global climate as a whole. It is one of UN&rsquo;s Goals of Sustainability to reduce the global emissions of CO2. If it is possible to show that people will choose the bike if the need of facilities to house them are adequately met, then this can be used to guide cities&rsquo; citybuilding strategies and help them work towards a more sustainable future.</p>
+<hr>
+
+<div class="toc">
+  <summary>
+    <h2>Table of Contents</h2>
+  </summary>
+  <aside><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#why-is-this-important">Why is this important?</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#biking-in-san-francisco">Biking in San Francisco</a>
+      <ul>
+        <li><a href="#mapping-the-data-out-across-san-francisco">Mapping the data out across San Francisco</a></li>
+        <li><a href="#bicycle-patterns-in-san-francisco">Bicycle Patterns in San Francisco</a></li>
+        <li><a href="#geographic-patterns">Geographic Patterns</a></li>
+        <li><a href="#bicycle-life-of-the-city-visualized">Bicycle Life of the City: Visualized</a></li>
+      </ul>
+    </li>
+    <li><a href="#so-what-came-first">So what came first?</a>
+      <ul>
+        <li><a href="#quick-glossary-bike-lane-classes"><em>Quick Glossary: Bike Lane Classes</em></a></li>
+        <li><a href="#does-the-type-of-lane-attract-more-bicyclists">Does the type of Lane attract more Bicyclists?</a></li>
+      </ul>
+    </li>
+    <li><a href="#can-we-learn-from-this-with-the-power-of-machine-learning">Can we learn from this with the power of Machine Learning?</a>
+      <ul>
+        <li><a href="#the-performance-of-the-predictions">The Performance of the Predictions</a></li>
+      </ul>
+    </li>
+    <li><a href="#predicting-the-viability-of-constructing-a-bike-lane">Predicting the Viability of Constructing a Bike Lane</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav></aside>
+</div>
+
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li>Biking in San Francisco
+<ul>
+<li>Mapping the data our across San Francisco</li>
+<li>Bicycle Patterns in San Francisco</li>
+<li>Geographic Patterns</li>
+<li>Bicycle Life of the City: Visualized</li>
+</ul>
+</li>
+<li>So what came first?
+<ul>
+<li>Bike Growth vs Bike Volume</li>
+<li>Bike Network Timelapse Map</li>
+</ul>
+</li>
+<li>Does the type of Lane attract more Bicyclists?
+<ul>
+<li>Bike Lane Class Comparison</li>
+<li>Bike Lane Construction: Before and After</li>
+</ul>
+</li>
+<li>Can we learn from this with Machine Learning?
+<ul>
+<li>Introduction to Machine Learning</li>
+<li>The Performance of the Predictions</li>
+<li>Using the Predictions</li>
+</ul>
+</li>
+<li>Conclusion</li>
+<li>References</li>
+</ul>
+<hr>
+<h2 id="biking-in-san-francisco">Biking in San Francisco</h2>
+<p>San Francisco is a large city in America, that in 2009 adopted a cityplanning strategy developed by the <a href="https://www.sfmta.com/reports/sfmta-2013-2018-bicycle-strategy-0">San Francisco Minicipal Transportation Agency (SFMTA)[1]</a> to focus heavily on its bicycle development and infrastructure, in the hopes to bring San Francisco up there among the top cities around the world in terms of biking, such as Copenhagen<a href="https://www.sfmta.com/sites/default/files/BicycleStrategyFinal_0.pdf">[2]</a>. Since 2013, the SFMTA has been hard at work to provide what is today a very expansive and deeply intergrated bike lane network that many bicyclists are able to take advantage of.</p>
+<p>To keep track of the city&rsquo;s bicycle development over time, the SFMTA has been performing annual counts of the amount of bicyclists at key locations since 2006<a href="https://www.sfmta.com/getting-around/bike/bicycle-ridership-data/manual-bike-counts">[3]</a>, even before the strategy. In 2016, the first <em>automatic</em> counters were installed into the lanes directly, providing continuous hourly counts of bicyclists all the way up to today. Together, these create the bigger picture of how the bicyclists have developed over time across the whole of San Francisco.</p>
+<p>We will be using these two datasets - the <strong>Manual Counts</strong> and <strong>Automatic Counts</strong> respectively - together with a dataset of the whole of the <strong>Bike Network</strong>, which includes information such as lane length, installation year, lane type (class), and much more. Additionally, we will use data about the <strong>Automatic Counters</strong> themselves, to get an idea of where they&rsquo;re located and when they were installed, as well as the <strong>Policing Districts</strong> in San Francisco to categorize different areas within the city. The Manual Counts dataset already includes all the information about their locations within.</p>
+<h3 id="mapping-the-data-out-across-san-francisco">Mapping the data out across San Francisco</h3>
+<p>Below you will find an interactive <em>map</em> of San Francisco, with all the data from the above datasets overlaid. More information about each element can be found by clicking or hovering over them. At first, you will see only the bicycle network to get an idea of how expansive it is today. <strong>Click the &ldquo;Layers&rdquo; button on the top right</strong> to enable or disable the other elements: <em>Manual Count Locations, Automatic Counters, and Districts.</em></p>
+<iframe width="100%" height="700" name="iframe" src="BikeNetworkMap.html" frameborder="0" scrolling="no"></iframe>
+<ul>
+<li>Clicking on a Lane will get you information about the lane, such as its name, length in miles, what year it was installed or upgraded, as well as what <em>Class</em> of lane it is. More on that later.</li>
+<li>Clicking on a District will display its name.</li>
+<li>Hovering over Manual Count Locations will display the name, as well as which years this location was counted.</li>
+<li>Hovering over Automatic Counters will display their name.</li>
+</ul>
+<h3 id="bicycle-patterns-in-san-francisco">Bicycle Patterns in San Francisco</h3>
+<p>Using the datasets, we are able to extract patterns in the usage of bikes across San Francisco. As the automatic counters run continuously, we can extract information about what timestamps and what seasons see the highest amount of bicyclists, and how the course of a day or the course of a year may look.</p>
+<p>Below you will see two plots displaying the average amount of bicyclists at each counter by the hour, as well as by the month. <strong>The plots are interactive, try hovering over them.</strong></p>
+<iframe width="550" height="410" name="iframe" src="BikeVolumeStatisticsTime.html" frameborder="0" scrolling="no" style="margin-bottom:-20px;"></iframe>
+<p>We see that bicyclists in San Francisco peak by a huge margin during the hours of 08:00-09:00 and 17:00-18:00 across only weekdays. It is pretty clear to say that this is the large amount of people commuting to and from work at exactly these hours. On weekends, these spikes are entirely nonexistent, while instead a more smooth curve peaks just around mid-day. This is indicative that the population of San Francisco heavily use their bikes as a means of transportation to work, while way fewer use them for other errands or leisure.</p>
+<p>As with months, we see that the usage of bikes definitely correlate with the season of year. The peak month of <em>August</em> sees almost <em>twice as much</em> bicycle volume as the lowest month of February. The wave of bike volume tends more in the direction of fall than mid-summer, peaking at August and almost closely followed into October, where it then starts falling again as we enter the months of winter.</p>
+<h3 id="geographic-patterns">Geographic Patterns</h3>
+<div>
+	<iframe style="display:inline-block;width:60% !important" width="900" height="510" name="iframe" src="BikeVolumeStatisticsDistrict.html" frameborder="0" scrolling="no"></iframe>
+	<iframe style="display:inline-block;width:35% !important" width="200" height="500" name="iframe" src="BikeDistrictVolumeMap.html" frameborder="0" scrolling="no"></iframe>
+</div>
+<p>What about geographic correlation? Do some districts see more average bicycle usage than others? Is it possibly because of how densely structured its bike network is? Well, the above plots would seem to imply that it isn&rsquo;t. To the left we see a diagram contain two bars for each district: The solid bar is the average amount of bicyclists in that area, while the dashed bar to the right is how many miles of bike lane that district has for every square-mile of area within it. The districts are sorted from highest to lowest in terms of bicycle counts. The map on the right visualizes the districts colored by this amount.</p>
+<p>We very clearly see that the amount of bicyclists doesn&rsquo;t seem to depend entirely on the density of the bike network in that area, or at least the effects of this isn&rsquo;t enough to overcome other factors in the area. Several districts are much better covered by bike lanes yet see much less traffic, such as <em>Richmond</em>, being the highest in bike lane density but almost the very lowest in terms of actual average usage. On the other hand, we <em>do</em> see that the central parts of the city see much much stronger use in bicycles, namely the Tenderloin and Southern districts, which lie at the heart of the city. Since we know the vast majority of bike traffic is likely going to and from work, it is a fair guess to say that these central parts of the city are much more filled with business, than say a residential district such as Richmond. Additionally, we might be able to go as far as to guess that this effect extends onto regular vehicular traffic, too.</p>
+<p>In either case, the central parts of the city definitely seem to be the big focus points of bicyclists, where the demand for infrastructure could be the highest.</p>
+<h3 id="bicycle-life-of-the-city-visualized">Bicycle Life of the City: Visualized</h3>
+<p>Finally, we can visualize these temporal and geographic patterns directly on a map wih the use of <strong>animation!</strong> This map shows the average bike counts across the whole city, for every hour, in every month. The individual hours are the average across all day of that month at that point in time. The counts are displayed as a heatmap, expanding with the increase in amount of bicycle traffic.</p>
+<iframe width="100%" height="700" name="iframe" src="BikeVolumeAnimatedMap.html" frameborder="0" scrolling="no"></iframe>
+<p>You can really see the peak hours as well as central focus, just like we saw in the plots earlier.</p>
+<hr>
+<h2 id="so-what-came-first">So what came first?</h2>
+<p>Now we&rsquo;ll try to get into the actual question of this blog post. We know that the SFMTA Bicycle Strategy started in 2009, marking the start of the largest expansion in the bike network since the 1900&rsquo;s. We also know that we have bicycle counts available since 2006, before this large expansion. If we plot them together, will we see a reaction in the bicycle counts as a response to the bike network&rsquo;s growth? Let&rsquo;s take a look!</p>
+<div style="display: block !important; justify-content: center; margin: auto; width:950px;">
+	<iframe width="1000" height="510" name="iframe" src="BikeGrowth.html" frameborder="0" scrolling="no"></iframe>
+</div>
+<p>This chart displays the bike network in terms of its total amount of miles across the years, compared to the average amount of bicyclists, both with the manual and the automatic counts. We see the spike in 2010 corresponding to the SFMTA&rsquo;s Bicycle Strategy kicking into gear, as mentioned. The very next year: We see an almost identical climb in bicyclists for that year. The year&rsquo;s delay could very well be that some lanes may have finished late-2010, or it could be that it just takes a bit of time for the habits of the population to respond, but there is definitely a clear correlation between the two. It&rsquo;s not entirely possible to say whether the lanes <em>directly</em> caused this. The sudden updraft could also have been the result of a promotional campaign in the SFMTA&rsquo;s strategy. But even in that case, it would be easy to say that a sharp expansion is good reason to launch an associated campaign with.</p>
+<p><strong>Take a look at that second tab in the plot above, if you haven&rsquo;t already.</strong> The bike network does not just consist of lanes and nothing more, we also have categorization for what <em>kind</em> of lane it is. On this tab, we see the same evolution over time, but with the distribution among the different classes. As you may notice, <em>Class II</em> begins to dip at some point. This is because these lanes are being refreshed into <em>Class III</em> or <em>Class IV</em> in more recent times. You may notice that <em>Class IV</em> were not a thing until just about 2010.</p>
+<p>We can visualize the expansion of the Bike Network on the map through an animation that shows the development in each year. Each lane is colored by its respective class, and appears on the map during the year of its construction <em>(or update)</em>. You can even pause the animation to look at the network at any given year!</p>
+<iframe width="100%" height="700" name="iframe" src="BikeNetworkAnimatedMap.html" frameborder="0" scrolling="no"></iframe>
+<p><em>(<strong>Note:</strong> Due to a bug, the map will not animate if not all geometry is either <strong>all before</strong> or <strong>all after</strong> 2002. In order to work around this bug, +1000 has been added to the year&rsquo;s timestamps. Subtract 1000 to get the represented year. The timelapse starts in <strong>1972</strong> and ends in <strong>2022</strong>.)</em></p>
+<hr>
+<h3 id="quick-glossary-bike-lane-classes"><em>Quick Glossary: Bike Lane Classes</em></h3>
+<div>
+	<div style="display:inline-block;width: 23% !important; border-radius:5px; padding: 5px; border-color: lightgrey; border-style: solid; border-width: 2px; box-shadow: 2px 2px 5px grey;">
+		<img src="https://www.sfmta.com/sites/default/files/styles/gallery-image/public/images/gallery-images/class_i.jpg" width='auto' height='auto'>
+		<b>Class I</b>
+		<br>
+		<i>Off-street paved bicycle paths that are often shared with pedestrians.</i>
+	</div>
+	<div style="display:inline-block;width: 23% !important; border-radius:5px; padding: 5px; border-color: lightgrey; border-style: solid; border-width: 2px; box-shadow: 2px 2px 5px grey;">
+		<img src="https://www.sfmta.com/sites/default/files/styles/gallery-image/public/images/gallery-images/class_ii_0.jpg" width='auto' height='auto'>
+		<b>Class II</b>
+		<br>
+		<i>Standard bike lanes. Often situated at the side of main roads.</i>
+	</div>
+	<div style="display:inline-block;width: 23% !important; border-radius:5px; padding: 5px; border-color: lightgrey; border-style: solid; border-width: 2px; box-shadow: 2px 2px 5px grey;">
+		<img src="https://www.sfmta.com/sites/default/files/styles/gallery-image/public/images/gallery-images/class_iii.jpg" width='auto' height='auto'>
+		<b>Class III</b>
+		<br>
+		<i>Lanes that are typically wide and shared by bicyclists and vehicles.</i>
+	</div>
+	<div style="display:inline-block;width: 23% !important; border-radius:5px; padding: 5px; border-color: lightgrey; border-style: solid; border-width: 2px; box-shadow: 2px 2px 5px grey;">
+		<img src="https://www.sfmta.com/sites/default/files/styles/gallery-image/public/images/gallery-images/class_iv.jpg" width='auto' height='auto'>
+		<b>Class IV</b>
+		<br>
+		<i>Protected bike lanes that are separated from the traffic of the main road.</i>
+	</div>
+</div>
+<p><em>The source for the above can be found <a href="https://www.sfmta.com/getting-around/bike/bike-improvements-toolkit">here[4]</a>.</em></p>
+<hr>
+<h3 id="does-the-type-of-lane-attract-more-bicyclists">Does the type of Lane attract more Bicyclists?</h3>
+<p>While the initial question was whether <em>lanes</em> caused an increase in the amount of users, the obvious follow-up question is whether the <em>type</em> of lane has an influence on how much this applies. You would think that protected, seperated, or otherwise safer and/or nicer types of lanes would see more users. With the classes explored above, we can look at whether these have some sort of impact on the usage they get.</p>
+<div style="display: block !important; justify-content: center; margin: auto; width:950px;">
+	<iframe width="950" height="510" name="iframe" src="BikeClassVolume.html" frameborder="0" scrolling="no"></iframe>
+</div>
+<p>We see the overall distribution of the lane classes as of today, and then how much usage on average each class of lane gets, both on Weekdays and Weekends respectively. <em>Class III</em> takes up the majority of the network, as was also known from the expansion plot earlier. We see however that it almost sees the least usage, only beaten by <em>Class II</em>. <em>Class I</em> and <em>Class IV</em> see by far the most use - something that is not surprising, looking at what these classes mean. <strong>Interestingly,</strong> we see that the <em>proportion of Class I on Weekends</em> is twice that of Class IV - much more than the proportion on Weekdays. This implies that on Weekends, the fewer bicyclists that are out and about usually tend more towards the <em>Class I</em> type lanes - typically what would be found in parks or green areas. Lanes that provide much better leisure, than the traffic-sharing ones amongst the other classes.</p>
+<p>It is pretty clear that the type of lane has a major impact on how many choose to use it. But it doesn&rsquo;t quite answer whether the <em>construction</em> of these cause an influx in riders. We can however look into that! By looking at the bicycle usage at specific counters that existed both before <em>and</em> after the lane was built or updated, we can directly compare the growth it saw:</p>
+<div style="display: block !important; justify-content: center; margin: auto; width:950px;">
+	<iframe width="950" height="510" name="iframe" src="BikeClassGrowth.html" frameborder="0" scrolling="no"></iframe>
+</div>
+<p>There is a limited subset of counters available that existed both before and after a lane&rsquo;s update or construction. However, the above plot shows the exact average amount of bicyclists across the counters we <em>do</em> have in the year before, and the year after. The color of the line is determined by what class the lane was upgraded <em>into.</em> The plot includes manual count locations, where available. <strong>Hover over it, and take a look at the &ldquo;Average&rdquo; tab too.</strong> Unfortunately, no <em>Class I</em> lanes had construction dates in the data, and had to be excluded from this analysis.</p>
+<p>We see that <em>Class IV</em> grew more steeply than <em>Class II</em> and <em>Class III</em>. This seems to imply that indeed, the construction of these lanes brought more overall bicyclists to those lanes over the 2-year gap. <em>Class II</em> sees the wildest changes, having the lowest climb on average, but also has the single steepest one alone. All in all, the construction of lanes definitely see growth, which was also reflected in the <em>Bike Network Growth vs Bike Volume</em> plot from before.</p>
+<hr>
+<h2 id="can-we-learn-from-this-with-the-power-of-machine-learning">Can we learn from this with the power of Machine Learning?</h2>
+<p>We are clearly able to see that the expansion of the bicycle network has a positive effect on the amount of bike riders across the city as a whole. However, we only have the limited datapoints of where the counters happen to be located - which is far from everywhere in the city. Additionally, these counters only provide the counts <em>as they are now.</em> If our goal is to see whether the construction of <em>new</em> lanes would bring more, is there something we can do with this data that may indicate the effects of a lane might have, before it is even built?</p>
+<p>Enter <strong>Machine Learning.</strong></p>
+<p>Machine Learning works by looking at a lot of <em>existing</em> data, and trying to find patterns, relations, and other predictive factors that may help us be able to &ldquo;predict&rdquo; what the resulting value would be - almost like what we have tried to do ourselves up until now! We can use our data about how many bicyclists were counted at all our locations, depending on the location, type of day, and most importantly, type of lane, to feed into an algorithm that will try to correlate these indicators to the count we already know. From then, we can feed it a <em>location, type of day, and type of lane</em> that it <strong>doesn&rsquo;t</strong> know, and we will get a result that somewhat mimics what we fed it before.</p>
+<p>What we hope to see, is whether it will be possible to use these predictions to potentially guide the development of the city, to work towards a greener environment.</p>
+<h3 id="the-performance-of-the-predictions">The Performance of the Predictions</h3>
+<p>By removing a portion of the data from the training of the machine learning model, we can use this as if it&rsquo;s &ldquo;new data we haven&rsquo;t seen&rdquo;, except where we know the true answers. This can be used to measure how well the Machine Learning model is performing. There are a total of <strong>170</strong> predictions made in our dataset that we can evaluate off of. Each of these predictions were given a position, district, and class of lane, and the output was how many bicyclists (relative to the average amount) that would use that lane. By comparing these outputs with the <strong>170 <em>known</em> true values</strong>, we can see just how much off the model is.</p>
+<div style="display: block !important; justify-content: center; margin: auto; width:1250px;">
+	<iframe width="1250" height="510" name="iframe" src="ModelPerformance.html" frameborder="0" scrolling="no"></iframe>
+</div>
+<p>The plot to the left shows the amount of predictions that fall into each amount of error. <strong>You can click the explanation boxes on both plots to show or hide that element.</strong> We see that the vast majority has an error of less than 0.2 times the mean. If the mean was, say for a year 600, then this means that the vast majority of the model&rsquo;s predictions are off by <strong>less than 120 people</strong>. Some predictions still, however, are off by more than 1 whole mean, which means it accidentally predicts a whole 600 or more off.</p>
+<p>The model gives us some more interesting insights than just the predictions, though. The right plot shows <em>how important</em> each attribute of a predicted value is to the outcome. The Latitude accounts for almost <strong><em>half</em></strong> the explanation of the resulting outcome, while Longitude is just about <strong>22%</strong>. Additionally, we see that whether it is Weekend determines quite a lot, which is not surprising given what we&rsquo;ve seen ourselves in our earlier analysis. We notice that the <em>Classes</em> don&rsquo;t give quite as much explaining power as some of the other attributes. And of them, <em>Class II</em> and <em>Class III</em> explain the most. Now note, that this doesn&rsquo;t mean that a lane <em>being</em> Class II or III causes a higher result, but rather it means that <strong><em>whether or not</em></strong> it is Class II or III makes a bigger impact (for example, <strong><em>not</em></strong> being Class II may make the result larger).</p>
+<p>We can also compare the predicted values to the real one using the map:</p>
+<iframe width="950" height="700" name="iframe" src="BikePredictedVsRealHeatmap.html" frameborder="0" scrolling="no"></iframe>
+<p>Go ahead, put it on loop and try to play it. You will be able to see the subtle differences in the map&rsquo;s values.</p>
+<hr>
+<h2 id="predicting-the-viability-of-constructing-a-bike-lane">Predicting the Viability of Constructing a Bike Lane</h2>
+<p>Finally, this is what it&rsquo;s all come down to. We can try to use this model to predict how effective each lane in the city would be, if it were any specific class.</p>
+<p>Below, a map is shown in which we <em>for every lane in the whole Bike Network</em> attempted to predict the amount of riders it would see across all 4 Classes of Lane. <strong>Use the Layers button in the top right to select which classes you would like to see.</strong> Their widths are scaled to be larger for lanes with a larger predicted bicycle volume. Hover over a lane to view its predicted outcome. These results are scaled up to the mean of <em>2019</em>, so essentially these are the numbers you would expect to see during 2019, according to the Machine Learning model.</p>
+<iframe width="950" height="900" name="iframe" src="BikeNetworkPredictedValues.html" frameborder="0" scrolling="no"></iframe>
+<p>Hover over the lanes to get information about the prediction. On top of that, since we know the cost of each Bike Lane Class pre mile<a href="https://www.nvta.ca.gov/sites/default/files/Appendix%20G_Facility%20Cost%20Estimate%20Assumptions_FINAL.pdf">[5]</a>, we can use this with the length of each segment to estimate a cost-per-mile per bicyclist across this segment. This essentially forms a <em>cost effectiveness</em> of constructing this lane against the results of it.</p>
+<p><strong>The &ldquo;Best&rdquo; Class in the Layers menu is the most interesting one.</strong> It shows the whole map, where every lane is shown as the Class of lane that scored the highest predicted amount of bicyclists here. Hover over it to see which class it is specifically, and the values from it.</p>
+<p>Ideally, this kind of map could be used on the <strong>full road network</strong> (rather than just our already-existing Bike Network dataset we worked with today) to suggest bike lanes on any road <em>without</em> a bike lane already for further investigation - possibly being able to form a prioritized queue of which lanes may be worth investigating first. This type of data analysis could drive the city towards a more green future, more effectively.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>We have concluded from our data analysis today, that in fact bicyclists follow the infrastructure of the city that houses them. When the city supports its biking demographic better, more people will choose the bike. When more focus is provided on better, nicer, and safer lanes, the effects will increase. However typically, these lanes will also cost more.</p>
+<p>At the end of the day however, whether you can concretely <em>prove</em> this correlation is too early to tell. The datasets used were rather limited, affecting both the accuracy of our analysis, as well as the accuracy of our Machine Learning experimental model. This is rather noticeable, when you see several areas on the Machine Learning model&rsquo;s predicted map, where <em>Class II</em> seems to be better than <em>Class I</em> or <em>IV</em> - even when money isn&rsquo;t taken into account. The biases stemming from certain areas just not having enough vareity in its lanes unfortunately affects the model too greatly to be useable in any real case. To make the analysis more accurate, we would need some actual <em>experiments</em> to look into - where for example a Class IV is constructed in an area that otherwise doesn&rsquo;t have any, and we can see the before-and-after. Additionally, the dataset could be augmented with other traffic and road data, which may reveal other dependencies we were not able to see today. For example, maybe the absence of car traffic has a bigger impact on the bicycle usage on a lane than the Latitude and Longitude of it.</p>
+<p>The methodology performed today however may still prove useful, in that a governing body could take it further in exactly that way. With access to more city data, and with more sophisticated data scientists on the job, modelling the performance of bike lanes in the city may actually be able to provide real useful values. We&rsquo;ve already seen a glimpse of it here, at least in implication.</p>
+<h1 id="to-answer-the-question">To answer the question</h1>
+<p><strong><em>What came first: The Bicyclist, or the Bike Lane?</em></strong></p>
+<p>It was not quite possible to answer this question confidently using the data we used today alone, however all signs point at it being the Bike Lane: Whether directly as a result of the facilities, or indirectly as a result of the in-conjunction promotional campaigns, the number of people choosing the Bike definitely grew as the city chose to embrace it. This may be a suggestion - If you want a greener future through the means of cultivating a thriving bicycling culture, expanding the facilities to house it may very well be a good idea.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li>[1] SFMTA Bicycle Strategy Summary - <a href="https://www.sfmta.com/reports/sfmta-2013-2018-bicycle-strategy-0">https://www.sfmta.com/reports/sfmta-2013-2018-bicycle-strategy-0</a></li>
+<li>[2] SFMTA Bicycle Strategy Document 2013 - <a href="https://www.sfmta.com/sites/default/files/BicycleStrategyFinal_0.pdf">https://www.sfmta.com/sites/default/files/BicycleStrategyFinal_0.pdf</a></li>
+<li>[3] SFMTA Manual Bike Counts Summary - <a href="https://www.sfmta.com/getting-around/bike/bicycle-ridership-data/manual-bike-counts">https://www.sfmta.com/getting-around/bike/bicycle-ridership-data/manual-bike-counts</a></li>
+<li>[4] SFMTA Bike Facilities Toolkit - <a href="https://www.sfmta.com/getting-around/bike/bike-improvements-toolkit">https://www.sfmta.com/getting-around/bike/bike-improvements-toolkit</a></li>
+<li>[5] Napa Valley Transportation Authority: Bicycle Facility Cost Estimates - <a href="https://www.nvta.ca.gov/sites/default/files/Appendix%20G_Facility%20Cost%20Estimate%20Assumptions_FINAL.pdf">https://www.nvta.ca.gov/sites/default/files/Appendix%20G_Facility%20Cost%20Estimate%20Assumptions_FINAL.pdf</a></li>
+</ul>
+
+      </article>
+    </div>
+
+    
+      <div class="meta article-card">
+    <div class="row">
+      <span class="label">
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M32 456a24 24 0 0024 24h400a24 24 0 0024-24V176H32zm320-244a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zM456 64h-55.92V32h-48v32H159.92V32h-48v32H56a23.8 23.8 0 00-24 23.77V144h448V87.77A23.8 23.8 0 00456 64z'/></svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Published At</span><time>2022-05-04 15:51 CEST</time>
+      
+    </div>
+
+    
+
+    <div class="row social-share">
+      <span class="label">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path d='M272 176v161h-32V176H92a12 12 0 00-12 12v280a12 12 0 0012 12h328a12 12 0 0012-12V188a12 12 0 00-12-12zM272 92.63l64 64L358.63 134 256 31.37 153.37 134 176 156.63l64-64V176h32V92.63z'/></svg>
+
+Share with</span>
+      
+      
+      <a
+        target="_blank"
+        title="share to reddit"
+        rel="noopener noreferrer"
+        aria-label="share What came first: The Bicyclist, or the Bicycle Lane? on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2fexample.org%2fposts%2fsanfranciscobiking%2f&title=What%20came%20first%3a%20The%20Bicyclist%2c%20or%20the%20Bicycle%20Lane%3f">
+        
+
+
+
+
+
+
+
+
+
+<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512' fill="currentColor" stroke="currentColor" stroke-width="10"><path d='M324 256a36 36 0 1036 36 36 36 0 00-36-36z'/><circle cx='188' cy='292' r='36' transform='rotate(-22.5 187.997 291.992)'/><path d='M496 253.77c0-31.19-25.14-56.56-56-56.56a55.72 55.72 0 00-35.61 12.86c-35-23.77-80.78-38.32-129.65-41.27l22-79 66.41 13.2c1.9 26.48 24 47.49 50.65 47.49 28 0 50.78-23 50.78-51.21S441 48 413 48c-19.53 0-36.31 11.19-44.85 28.77l-90-17.89-31.1 109.52-4.63.13c-50.63 2.21-98.34 16.93-134.77 41.53A55.38 55.38 0 0072 197.21c-30.89 0-56 25.37-56 56.56a56.43 56.43 0 0028.11 49.06 98.65 98.65 0 00-.89 13.34c.11 39.74 22.49 77 63 105C146.36 448.77 199.51 464 256 464s109.76-15.23 149.83-42.89c40.53-28 62.85-65.27 62.85-105.06a109.32 109.32 0 00-.84-13.3A56.32 56.32 0 00496 253.77zM414 75a24 24 0 11-24 24 24 24 0 0124-24zM42.72 253.77a29.6 29.6 0 0129.42-29.71 29 29 0 0113.62 3.43c-15.5 14.41-26.93 30.41-34.07 47.68a30.23 30.23 0 01-8.97-21.4zM390.82 399c-35.74 24.59-83.6 38.14-134.77 38.14S157 423.61 121.29 399c-33-22.79-51.24-52.26-51.24-83A78.5 78.5 0 0175 288.72c5.68-15.74 16.16-30.48 31.15-43.79a155.17 155.17 0 0114.76-11.53l.3-.21.24-.17c35.72-24.52 83.52-38 134.61-38s98.9 13.51 134.62 38l.23.17.34.25A156.57 156.57 0 01406 244.92c15 13.32 25.48 28.05 31.16 43.81a85.44 85.44 0 014.31 17.67 77.29 77.29 0 01.6 9.65c-.01 30.72-18.21 60.19-51.25 82.95zm69.6-123.92c-7.13-17.28-18.56-33.29-34.07-47.72A29.09 29.09 0 01440 224a29.59 29.59 0 0129.41 29.71 30.07 30.07 0 01-8.99 21.39z'/><path d='M323.23 362.22c-.25.25-25.56 26.07-67.15 26.27-42-.2-66.28-25.23-67.31-26.27a4.14 4.14 0 00-5.83 0l-13.7 13.47a4.15 4.15 0 000 5.89c3.4 3.4 34.7 34.23 86.78 34.45 51.94-.22 83.38-31.05 86.78-34.45a4.16 4.16 0 000-5.9l-13.71-13.47a4.13 4.13 0 00-5.81 0z'/></svg>
+
+
+
+
+
+
+
+
+      </a>
+      <a
+        target="_blank" 
+        title="share to twitter"
+        rel="noopener noreferrer"
+        aria-label="share What came first: The Bicyclist, or the Bicycle Lane? on twitter"
+        href="https://twitter.com/intent/tweet/?text=What%20came%20first%3a%20The%20Bicyclist%2c%20or%20the%20Bicycle%20Lane%3f&amp;url=http%3a%2f%2fexample.org%2fposts%2fsanfranciscobiking%2f&amp;hashtags=">
+        
+
+
+
+
+
+
+
+
+
+
+<svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:none;" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+
+
+
+
+
+
+
+      </a>
+      <a
+        target="_blank"
+        title="share to facebook"
+        rel="noopener noreferrer"
+        aria-label="share What came first: The Bicyclist, or the Bicycle Lane? on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2fexample.org%2fposts%2fsanfranciscobiking%2f">
+        
+
+
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 24 24" style="fill:none;" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+
+
+
+
+
+
+
+
+
+      </a>
+    </div>
+
+    
+</div>
+
+    
+
+    
+
+  </div>
+</main>
+
+    <footer id="footer">
+  <div class="container has-padding is-flex">
+    <ul class="links">
+      
+      <li>
+        <a class="nav-link navbar-button" href="http://example.org/index.xml" type="application/rss+xml">RSS</a>
+      </li>
+      <li>
+        <a
+          rel="nofollow"
+          target="_blank"
+          href="https://github.com/wayjam/hugo-theme-fluency"
+          title="using Hugo theme fluency">
+          Theme Fluency
+        </a>
+      </li>
+      <li>
+        <a rel="nofollow" target="_blank" href="https://gohugo.io" title="Built with hugo">Built with Hugo</a>
+      </li>
+    </ul>
+    <div class="copyright">
+       &copy; 2022 My New Hugo Site
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+    window.FluencyCopyIcon = '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\u003csvg xmlns=\u0027http:\/\/www.w3.org\/2000\/svg\u0027 class=\u0027ionicon\u0027 viewBox=\u00270 0 512 512\u0027\u003e\u003crect x=\u0027128\u0027 y=\u0027128\u0027 width=\u0027336\u0027 height=\u0027336\u0027 rx=\u002757\u0027 ry=\u002757\u0027 stroke-linejoin=\u0027round\u0027 class=\u0027ionicon-fill-none ionicon-stroke-width\u0027\/\u003e\u003cpath d=\u0027M383.5 128l.5-24a56.16 56.16 0 00-56-56H112a64.19 64.19 0 00-64 64v216a56.16 56.16 0 0056 56h24\u0027 stroke-linecap=\u0027round\u0027 stroke-linejoin=\u0027round\u0027 class=\u0027ionicon-fill-none ionicon-stroke-width\u0027\/\u003e\u003c\/svg\u003e\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n'
+</script>
+
+
+<script defer src="http://example.org/js/main.min.8a03b7cd665b1352a56537802c91976fc70104f52f2771933bd6ea7a1cce4560.js" integrity="sha256-igO3zWZbE1KlZTeALJGXb8cBBPUvJ3GTO9bqehzORWA=" crossorigin="anonymous" async></script>
+
+
+
+<noscript>
+<style type=text/css>#theme-selector-button{display:none}</style>
+</noscript>
+
+
+
+
+  </body>
+</html>

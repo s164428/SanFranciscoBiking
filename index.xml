@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 May 2022 15:51:01 +0200</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What came first: The Bicyclist, or the Bicycle Lane?</title>
+      <link>http://example.org/posts/sanfranciscobiking/</link>
+      <pubDate>Wed, 04 May 2022 15:51:01 +0200</pubDate>
+      
+      <guid>http://example.org/posts/sanfranciscobiking/</guid>
+      <description>What came first, the chicken or the egg? Or in this case, the bicyclist or the bicycle lane? In this blog post we will dive into and try to see if it&amp;rsquo;s possible to answer this question, through the means of data. By analyzing datasets about the usage of bicycles along with data pertaining to the bicycle facilities in the same area, we hope to investigate whether it will be possible to determine if the strategies and actions of a city can have an impact on the transportation choices of its people.</description>
+    </item>
+    
+  </channel>
+</rss>

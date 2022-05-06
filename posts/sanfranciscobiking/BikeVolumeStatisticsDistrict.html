@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.1.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="d0168dc7-2d17-448d-8805-c57dd45d312f" data-root-id="112230"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="113828">
+          {"8b288af6-a956-43bb-b460-da5a46c459ca":{"defs":[],"roots":{"references":[{"attributes":{},"id":"112231","type":"DataRange1d"},{"attributes":{"end":25.25,"start":-1.25},"id":"112261","type":"Range1d"},{"attributes":{},"id":"112250","type":"SaveTool"},{"attributes":{},"id":"112233","type":"DataRange1d"},{"attributes":{"coordinates":null,"data_source":{"id":"112308"},"glyph":{"id":"112309"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"112311"},"nonselection_glyph":{"id":"112310"},"view":{"id":"112313"}},"id":"112312","type":"GlyphRenderer"},{"attributes":{"tools":[{"id":"112247"},{"id":"112248"},{"id":"112249"},{"id":"112250"},{"id":"112251"},{"id":"112252"},{"id":"112322"},{"id":"112324"}]},"id":"112254","type":"Toolbar"},{"attributes":{"fill_color":{"field":"fill_color"},"hatch_color":{"field":"hatch_color"},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.3},"x":{"field":"x"}},"id":"112309","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"fill_color"},"hatch_color":{"field":"hatch_color"},"hatch_pattern":{"value":"/"},"hatch_scale":{"value":10},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.3},"x":{"field":"x"}},"id":"112315","type":"VBar"},{"attributes":{"coordinates":null,"data_source":{"id":"112314"},"glyph":{"id":"112315"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"112317"},"nonselection_glyph":{"id":"112316"},"view":{"id":"112319"},"y_range_name":"LaneDensity"},"id":"112318","type":"GlyphRenderer"},{"attributes":{"axis":{"id":"112239"},"coordinates":null,"group":null,"ticker":null},"id":"112242","type":"Grid"},{"attributes":{"source":{"id":"112314"}},"id":"112319","type":"CDSView"},{"attributes":{"data":{"top":[0],"x":[0]},"selected":{"id":"112281"},"selection_policy":{"id":"112280"}},"id":"112263","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"fill_color"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"hatch_color"},"line_alpha":{"value":0.2},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.3},"x":{"field":"x"}},"id":"112311","type":"VBar"},{"attributes":{},"id":"112276","type":"AllLabels"},{"attributes":{},"id":"113595","type":"UnionRenderers"},{"attributes":{"below":[{"id":"112239"}],"center":[{"id":"112242"},{"id":"112246"},{"id":"112283"}],"extra_y_ranges":{"LaneDensity":{"id":"112261"}},"height":500,"left":[{"id":"112243"}],"renderers":[{"id":"112267"},{"id":"112289"},{"id":"112312"},{"id":"112318"}],"right":[{"id":"112262"}],"title":{"id":"112269"},"toolbar":{"id":"112254"},"width":900,"x_range":{"id":"112231"},"x_scale":{"id":"112235"},"y_range":{"id":"112233"},"y_scale":{"id":"112237"}},"id":"112230","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"112235","type":"LinearScale"},{"attributes":{"ticks":[0,1,2,3,4,5,6,7,8,9]},"id":"112320","type":"FixedTicker"},{"attributes":{},"id":"113596","type":"Selection"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"112312"}],"tooltips":[["Average Bicyclists on Weekday","@top{0.2f}"]]},"id":"112322","type":"HoverTool"},{"attributes":{},"id":"112272","type":"BasicTickFormatter"},{"attributes":{},"id":"112237","type":"LinearScale"},{"attributes":{"axis_label":"District","coordinates":null,"formatter":{"id":"112278"},"group":null,"major_label_orientation":0.5,"major_label_overrides":{"0":"SOUTHERN","1":"TENDERLOIN","2":"CENTRAL","3":"PARK","4":"NORTHERN","5":"MISSION","6":"BAYVIEW","7":"INGLESIDE","8":"RICHMOND","9":"TARAVAL"},"major_label_policy":{"id":"112279"},"ticker":{"id":"112320"}},"id":"112239","type":"LinearAxis"},{"attributes":{"coordinates":null,"group":null},"id":"112269","type":"Title"},{"attributes":{"axis_label":"Average Bicyclists (Weekday)","coordinates":null,"formatter":{"id":"112272"},"group":null,"major_label_policy":{"id":"112273"},"ticker":{"id":"112244"}},"id":"112243","type":"LinearAxis"},{"attributes":{"axis":{"id":"112243"},"coordinates":null,"dimension":1,"group":null,"ticker":null},"id":"112246","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"grey"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"grey"},"line_alpha":{"value":0.1},"line_color":{"value":"grey"},"top":{"field":"top"},"width":{"value":0},"x":{"field":"x"}},"id":"112265","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"fill_color"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"hatch_color"},"hatch_pattern":{"value":"/"},"hatch_scale":{"value":10},"line_alpha":{"value":0.1},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.3},"x":{"field":"x"}},"id":"112316","type":"VBar"},{"attributes":{"data":{"fill_color":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"],"hatch_color":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"],"line_color":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"],"top":{"__ndarray__":"oj/2p28RKkCrp9NYCYAmQAuvp/8HDChAIOwReTV6J0CNFuYkbzAyQJlaXir9USlAHfMAH9DPF0DL1ItfphkXQHFcfwj9JDRAj9Yx8z53IEA=","dtype":"float64","order":"little","shape":[10]},"x":{"__ndarray__":"mpmZmZmZyT8zMzMzMzPzP5qZmZmZmQFAmpmZmZmZCUDNzMzMzMwQQM3MzMzMzBRAzczMzMzMGEDNzMzMzMwcQGZmZmZmZiBAZmZmZmZmIkA=","dtype":"float64","order":"little","shape":[10]}},"selected":{"id":"113598"},"selection_policy":{"id":"113597"}},"id":"112314","type":"ColumnDataSource"},{"attributes":{"coordinates":null,"data_source":{"id":"112263"},"glyph":{"id":"112264"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"112266"},"nonselection_glyph":{"id":"112265"},"view":{"id":"112268"}},"id":"112267","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"grey"},"hatch_color":{"value":"grey"},"hatch_pattern":{"value":"/"},"hatch_scale":{"value":10},"line_color":{"value":"grey"},"top":{"field":"top"},"width":{"value":0},"x":{"field":"x"}},"id":"112286","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"fill_color"},"hatch_alpha":{"value":0.1},"hatch_color":{"field":"hatch_color"},"line_alpha":{"value":0.1},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.3},"x":{"field":"x"}},"id":"112310","type":"VBar"},{"attributes":{"source":{"id":"112308"}},"id":"112313","type":"CDSView"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"112318"}],"tooltips":[["Density of Bike Network (Miles/sqr mile)","@top{0.2f}"]]},"id":"112324","type":"HoverTool"},{"attributes":{},"id":"113597","type":"UnionRenderers"},{"attributes":{},"id":"112244","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"field":"fill_color"},"hatch_alpha":{"value":0.2},"hatch_color":{"field":"hatch_color"},"hatch_pattern":{"value":"/"},"hatch_scale":{"value":10},"line_alpha":{"value":0.2},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.3},"x":{"field":"x"}},"id":"112317","type":"VBar"},{"attributes":{"data":{"fill_color":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"],"hatch_color":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"],"line_color":["#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"],"top":{"__ndarray__":"hfYS2ktOnEDHcRzHca2ZQBzHcRzHEohACe0ltJdPgkAAavkDAtV6QPKPseJRLnFAchzHcRw9VUAkSZIkSWZRQCgtHy7p+UtAsQVbsAWjQkA=","dtype":"float64","order":"little","shape":[10]},"x":{"__ndarray__":"mpmZmZmZyb+amZmZmZnpP83MzMzMzPw/ZmZmZmZmBkBmZmZmZmYOQDMzMzMzMxNAMzMzMzMzF0AzMzMzMzMbQDMzMzMzMx9AmpmZmZmZIUA=","dtype":"float64","order":"little","shape":[10]}},"selected":{"id":"113596"},"selection_policy":{"id":"113595"}},"id":"112308","type":"ColumnDataSource"},{"attributes":{},"id":"113598","type":"Selection"},{"attributes":{},"id":"112273","type":"AllLabels"},{"attributes":{"data":{"top":[0],"x":[0]},"selected":{"id":"112305"},"selection_policy":{"id":"112304"}},"id":"112285","type":"ColumnDataSource"},{"attributes":{},"id":"112279","type":"AllLabels"},{"attributes":{},"id":"112274","type":"BasicTicker"},{"attributes":{},"id":"112281","type":"Selection"},{"attributes":{"coordinates":null,"group":null,"items":[{"id":"112284"},{"id":"112307"}]},"id":"112283","type":"Legend"},{"attributes":{},"id":"112304","type":"UnionRenderers"},{"attributes":{},"id":"112252","type":"HelpTool"},{"attributes":{},"id":"112305","type":"Selection"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"grey"},"hatch_alpha":{"value":0.1},"hatch_color":{"value":"grey"},"hatch_pattern":{"value":"/"},"hatch_scale":{"value":10},"line_alpha":{"value":0.1},"line_color":{"value":"grey"},"top":{"field":"top"},"width":{"value":0},"x":{"field":"x"}},"id":"112287","type":"VBar"},{"attributes":{},"id":"112248","type":"WheelZoomTool"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"grey"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"grey"},"hatch_pattern":{"value":"/"},"hatch_scale":{"value":10},"line_alpha":{"value":0.2},"line_color":{"value":"grey"},"top":{"field":"top"},"width":{"value":0},"x":{"field":"x"}},"id":"112288","type":"VBar"},{"attributes":{"coordinates":null,"data_source":{"id":"112285"},"glyph":{"id":"112286"},"group":null,"hover_glyph":null,"muted_glyph":{"id":"112288"},"nonselection_glyph":{"id":"112287"},"view":{"id":"112290"}},"id":"112289","type":"GlyphRenderer"},{"attributes":{"label":{"value":"Density of Bike Lane Network"},"renderers":[{"id":"112289"}]},"id":"112307","type":"LegendItem"},{"attributes":{},"id":"112247","type":"PanTool"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"grey"},"hatch_alpha":{"value":0.2},"hatch_color":{"value":"grey"},"line_alpha":{"value":0.2},"line_color":{"value":"grey"},"top":{"field":"top"},"width":{"value":0},"x":{"field":"x"}},"id":"112266","type":"VBar"},{"attributes":{"source":{"id":"112285"}},"id":"112290","type":"CDSView"},{"attributes":{},"id":"112251","type":"ResetTool"},{"attributes":{"overlay":{"id":"112253"}},"id":"112249","type":"BoxZoomTool"},{"attributes":{},"id":"112280","type":"UnionRenderers"},{"attributes":{"bottom_units":"screen","coordinates":null,"fill_alpha":0.5,"fill_color":"lightgrey","group":null,"left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"112253","type":"BoxAnnotation"},{"attributes":{},"id":"112275","type":"BasicTickFormatter"},{"attributes":{"source":{"id":"112263"}},"id":"112268","type":"CDSView"},{"attributes":{},"id":"112278","type":"BasicTickFormatter"},{"attributes":{"label":{"value":"Average Hourly Bicyclists"},"renderers":[{"id":"112267"}]},"id":"112284","type":"LegendItem"},{"attributes":{"axis_label":"Miles of Lane per Square Mile","coordinates":null,"formatter":{"id":"112275"},"group":null,"major_label_policy":{"id":"112276"},"ticker":{"id":"112274"},"y_range_name":"LaneDensity"},"id":"112262","type":"LinearAxis"},{"attributes":{"fill_color":{"value":"grey"},"hatch_color":{"value":"grey"},"line_color":{"value":"grey"},"top":{"field":"top"},"width":{"value":0},"x":{"field":"x"}},"id":"112264","type":"VBar"}],"root_ids":["112230"]},"title":"Bokeh Application","version":"2.4.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            const fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  const docs_json = document.getElementById('113828').textContent;
+                  const render_items = [{"docid":"8b288af6-a956-43bb-b460-da5a46c459ca","root_ids":["112230"],"roots":{"112230":"d0168dc7-2d17-448d-8805-c57dd45d312f"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    let attempts = 0;
+                    const timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
